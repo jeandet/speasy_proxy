@@ -4,4 +4,6 @@ index = ConfigSection("PROXY_INDEX", path={"default": "/tmp"})
 collab_endpoint = ConfigSection("PROXY_COLLAB_ENDPOINT",
                                 enable={"default": False,
                                         "type_ctor": lambda x: {'true': True,
-                                                                'false': False}.get(x.lower(), False)})
+                                                                'false': False}.get(x.lower(), False)},
+                                port ={"default": 9999, "type_ctor": int},
+                                )
